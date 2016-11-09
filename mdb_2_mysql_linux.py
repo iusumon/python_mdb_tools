@@ -91,7 +91,7 @@ def ExportData(src_db, dst_db, hostname="127.0.0.1", user="root", passwd="torva"
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        wx.Frame.__init__(self, None, -1, "Export Access DB to MySql", size=(530, 200))
+        wx.Frame.__init__(self, None, -1, "Export Access DB to MySql", size=(620, 170))
         bkg = wx.Panel(self)
 
         self.STextSrcDB = wx.StaticText(bkg, label="Source MDB:", size=(110, 30))
@@ -114,19 +114,19 @@ class MyFrame(wx.Frame):
         self.BtnExp.Bind(wx.EVT_BUTTON, self.BtnExp_click)
 
         box = wx.BoxSizer()
-        box.Add(self.STextSrcDB)
-        box.Add(self.TxtSrcDB)
-        box.Add(self.BtnSrc)
+        box.Add(self.STextSrcDB, 0, wx.ALL, 5)
+        box.Add(self.TxtSrcDB, 0, wx.ALL, 5)
+        box.Add(self.BtnSrc, 0, wx.ALL, 5)
 
         box1 = wx.BoxSizer()
-        box1.Add(self.STextDstDB)
-        box1.Add(self.TxtDstDB)
-        box1.Add(self.STextHost)
-        box1.Add(self.TxtHost)
-        box1.Add(self.STextUser)
-        box1.Add(self.TxtUser)
-        box1.Add(self.STextPasswd)
-        box1.Add(self.TxtPasswd)
+        box1.Add(self.STextDstDB, 0, wx.ALL, 5)
+        box1.Add(self.TxtDstDB, 0, wx.ALL, 5)
+        box1.Add(self.STextHost, 0, wx.ALL, 5)
+        box1.Add(self.TxtHost, 0, wx.ALL, 5)
+        box1.Add(self.STextUser, 0, wx.ALL, 5)
+        box1.Add(self.TxtUser, 0, wx.ALL, 5)
+        box1.Add(self.STextPasswd, 0, wx.ALL, 5)
+        box1.Add(self.TxtPasswd, 0, wx.ALL, 5)
 
         box2 = wx.BoxSizer()
         box2.Add(self.BtnExp)
